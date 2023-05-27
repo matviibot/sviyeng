@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import RegisterPage from "./pages/RegisterPage";
+import {useEffect, useState} from "react";
+import LoginPage from "./pages/LoginPage";
+import MainPage from "./pages/MainPage";
+import CoursesPage from "./pages/CoursesPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactsPage from "./pages/ContactsPage";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PayPage from "./pages/PayPage";
+import CopyrightPage from "./pages/CopyrightPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [isLogin, setIsLogin] = useState(false);
+    return (
+        <div className="App">
+            <Router>
+                <Header isLogin={isLogin} setLogin={setIsLogin}/>
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="/courses" element={<CoursesPage />} />
+                    <Route path="/about" element={<AboutUsPage />} />
+                    <Route path="/copyright" element={<CopyrightPage />} />
+                    <Route path="/contact" element={<ContactsPage />} />
+                    <Route path="/pay" element={<PayPage />} />
+                    <Route
+                        path="/login"
+                        element={<LoginPage setLogin={setIsLogin} />}
+                    />
+                    <Route
+                        path="/register"
+                        element={<RegisterPage setLogin={setIsLogin} />}
+                    />
+                </Routes>
+                <Footer />
+            </Router>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,309 @@
+@import "./_colors"
+.bg-main
+  background-color: $color-bg-primary
+
+.header
+  background-color: $color-bg-primary
+  font-family: 'Raleway', sans-serif!important
+  font-weight: 700
+  padding: 1rem
+  & a:hover
+    cursor: pointer
+  & .logo
+    width: 11rem
+  & .nav-bar
+    & a:hover
+      transition: color ease-in 0.1s
+      color: darken($color-bg-primary, 30%)
+    & .nav-btn
+      font-size: 20px
+      padding: 0.5rem 1.3rem
+      border-radius: 2rem
+      text-decoration: none
+      margin-left: 1.3rem
+      cursor: pointer
+      color: black
+      border: 0
+      &.light
+        padding: 1rem 2rem
+        border-radius: 2rem
+        background-color: #fff
+        &:hover
+          transition: background-color ease-in 0.1s
+          color: #000
+          background-color: darken(#fff, 20%)
+
+
+.head
+  background-color: $color-bg-primary
+  font-family: 'Raleway', sans-serif!important
+  font-weight: 700
+  padding: 1rem 1rem 0
+  padding-top: 4rem
+
+  & h3
+    font-weight: 700
+    font-size: 20px
+  & h1
+    font-weight: 900
+    font-size: 67px
+  & .people1
+    margin-left: 8rem
+    margin-bottom: -1.5rem
+
+    width: 40rem
+
+
+.body
+  padding: 5rem
+  & .title
+    margin: 5rem
+  & h3
+    font-weight: 700
+    font-size: 20px
+  & h1
+    font-weight: 900
+    font-size: 40px
+  & h2
+    font-weight: 900
+    font-size: 32px
+  & h3
+    font-weight: 700
+    font-size: 32px
+  & p
+    font-weight: 700
+    font-size: 20px
+
+  & .card1
+    padding: 5rem
+    display: flex
+    background-color: #DAD9DE
+    border-radius: 75px
+    & .girl1
+      margin-left: auto
+      width: 17rem
+    & .btn
+      margin-top: 2rem
+      padding: 2rem
+      border-radius: 50px
+      width: 25rem
+      border: 0
+
+      & p
+        margin: 0
+        padding: 0
+
+.review
+  width: 30rem
+  padding: 2rem
+// Variables
+$dialogBoxColor: #DAD9DE
+$triangleSize: 35px
+
+// Styles
+.dialog-box
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background-color: $dialogBoxColor
+  border-radius: 55px
+  padding: 2rem
+  width: 25rem
+  margin: 0 auto
+  text-align: center
+
+.dialog-content
+/* Styles for the content within the dialog box */
+
+
+.dialog-triangle
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+  top: -($triangleSize - 7)
+  width: 0
+  height: 0
+  border-left: $triangleSize solid transparent
+  border-right: $triangleSize solid transparent
+  border-bottom: ($triangleSize + 20) solid $dialogBoxColor
+
+.footer
+  bottom: 0
+  left: 0
+  width: 100%
+  background-color: #1C1C1C
+  color: #fff
+  padding: 5rem
+  z-index: 100
+  & hr
+    color: #fff
+    border: 0.07rem solid #ffffff
+    opacity: 100
+    margin: 3rem -1rem
+  & h1
+    font-weight: 900
+  & a
+    text-decoration: none
+    color: #fff
+    margin-bottom: 1rem
+    font-size: 23px
+    cursor: pointer
+    &:hover
+      transition: color ease-in 0.1s
+      color: #999
+  & h2
+    font-weight: 400
+    font-size: 20px
+    &.copy
+      color: #777
+  & .info
+    margin-left: 4.5rem
+
+.icon
+  margin: -0.3rem
+
+.gal
+  margin-top: 5rem
+.course
+  & h1
+    font-weight: 900
+.course-card
+  height: 15rem
+  display: flex
+  align-items: center
+  border-radius: 3rem
+  padding: 2rem
+  margin: 0 0 10rem
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+  .card-content
+    flex: 1
+    padding-right: 2rem
+
+    h1
+      font-size: 2rem
+      font-weight: 700
+      margin-bottom: 0.5rem
+
+
+    h2
+      font-size: 1.5rem
+      font-weight: 500
+      margin-bottom: 1rem
+
+
+    p
+      font-size: 1rem
+      line-height: 1.5
+      color: #444444
+
+
+
+  .level-container
+    display: flex
+    align-items: center
+
+
+  .level
+    width: 5rem
+    height: auto
+
+.buy
+  position: absolute
+  bottom: -10%
+  width: 30rem
+  line-height: 4rem
+  font-size: 30px
+  border-radius: 3rem
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 1
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out
+  &:hover
+    transform: translateX(-50%) translateY(-5%)
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2)
+.arrow1
+  position: absolute
+  width: 15rem
+  transform: rotate(135deg)
+  top: 12rem
+  left: -12rem
+
+
+.arrow2
+  position: absolute
+  width: 15rem
+  transform: rotate(225deg) scaleX(-1)
+  top: 38rem
+  right: -12rem
+
+.info-card
+  margin: 5rem 0
+  padding: 3rem
+  background-color: #fff
+  border-radius: 3rem
+  box-shadow: 0 2px 2rem rgba(0, 0, 0, 0.1)
+  & img
+    width: 100rem
+  & p
+    margin: 2rem 0
+    font-size: 1.3rem
+
+  &.contacts
+    h1
+      margin-bottom: 2rem
+    & .phone
+      margin: 2rem 1rem
+      rotate: -15deg
+      transform: scaleX(-1)
+  h1
+    font-size: 2rem
+    font-weight: 700
+    margin-bottom: 5rem
+  h2
+    font-size: 1.5rem
+    font-weight: 900
+
+.icon-phone
+  color: darken($color-bg-primary, 30%)
+  text-decoration: none
+  &:hover
+    transition: color ease-in 0.1s
+    color: darken($color-bg-primary, 40%)
+
+.login-form
+  width: 40rem
+  min-height: 35rem
+  & .btn
+    min-width: 10rem
+    padding: 1rem
+    background-color: #8BBABC
+    border-radius: 3rem
+    border: 0
+    &:hover
+      transition: background-color ease-in 0.1s
+      background-color: darken(  #8BBABC, 20%)
+  hr
+    margin: 2rem 0 0
+    width: 100%
+  h1
+    font-size: 2rem
+    font-weight: 700
+    margin-bottom: 1rem
+  h2
+    font-size: 1.5rem
+    font-weight: 900
+  a
+    font-size: 15px
+    padding: 0.5rem 1.3rem
+    border-radius: 2rem
+    text-decoration: none
+    cursor: pointer
+    color: #427FA0!important
+    border: 0
+    &:hover
+      transition: color ease-in 0.1s
+      color: darken(#427FA0, 30%)!important
