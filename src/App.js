@@ -9,18 +9,20 @@ import MainPage from "./pages/MainPage";
 import CoursesPage from "./pages/CoursesPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactsPage from "./pages/ContactsPage";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import PayPage from "./pages/PayPage";
 import CopyrightPage from "./pages/CopyrightPage";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
     const [isLogin, setIsLogin] = useState(false);
     return (
         <div className="App">
             <Router>
-                <Header isLogin={isLogin} setLogin={setIsLogin}/>
+                <Header isLogin={isLogin}/>
                 <Routes>
-                    <Route path="/" element={<MainPage />} />
+                    <Route path="/" element={<MainPage/>} />
+                    <Route path="/profile" element={isLogin?<ProfilePage setLogin={setIsLogin} />:<Navigate to="/login" replace />} />
                     <Route path="/courses" element={<CoursesPage />} />
                     <Route path="/about" element={<AboutUsPage />} />
                     <Route path="/copyright" element={<CopyrightPage />} />

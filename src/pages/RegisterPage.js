@@ -3,7 +3,7 @@ import {FiPhoneCall} from "react-icons/fi";
 import axios from "axios";
 import config from "bootstrap/js/src/util/config";
 import {useNavigate} from "react-router-dom";
-const LoginPage = ({setLogin}) => {
+const RegisterPage = ({setLogin}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
@@ -93,4 +93,4 @@ const LoginPage = ({setLogin}) => {
     );
 };
 
-export default LoginPage;
+export default RegisterPage;

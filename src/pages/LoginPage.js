@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {FiPhoneCall} from "react-icons/fi";
 import axios from "axios";
-import config from "bootstrap/js/src/util/config";
 import {useNavigate} from "react-router-dom";
 const LoginPage = ({setLogin}) => {
     const [email, setEmail] = useState('')
@@ -33,8 +31,11 @@ const LoginPage = ({setLogin}) => {
             console.log(response.data); // Handle the response as needed
             if (response.data.success) {
                 setLogin(true)
-                console.log('success')
+                localStorage.setItem('user_id', response.data.user_id)
+                // console.log('success')
+                navigate("/profile")
             }
+
         } catch (error) {
             setIsError(true)
         }

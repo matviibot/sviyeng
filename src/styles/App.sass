@@ -114,10 +114,6 @@ $triangleSize: 35px
   margin: 0 auto
   text-align: center
 
-.dialog-content
-/* Styles for the content within the dialog box */
-
-
 .dialog-triangle
   position: absolute
   left: 50%
@@ -307,3 +303,47 @@ $triangleSize: 35px
     &:hover
       transition: color ease-in 0.1s
       color: darken(#427FA0, 30%)!important
+
+.profile-name
+    font-size: 2.4rem
+    font-weight: 200
+    margin-bottom: 1rem
+.profile
+  & p
+    font-size: 1.5rem
+    font-weight: 200
+    margin-bottom: 1rem
+  & a:hover
+    transition: color ease-in 0.1s
+    color: darken($color-bg-primary, 30%)
+  & .logout-btn
+    width: 15rem
+    font-size: 20px
+    padding: 0.5rem 1.3rem
+    border-radius: 2rem
+    text-decoration: none
+    margin-left: 1.3rem
+    cursor: pointer
+    color: black
+    border: 0
+    &.light
+      padding: 1rem 2rem
+      border-radius: 2rem
+      background-color: #fff
+      &:hover
+        transition: background-color ease-in 0.1s
+        color: #000
+        background-color: darken(#fff, 20%)
+.profile-name
+    font-size: 3rem
+    font-weight: 200
+    margin-bottom: 1rem
+.profile-email
+    font-size: 1.5rem
+    font-weight: 200
+    margin-bottom: 1rem
+.profile-stats
+    font-size: 1.5rem
+    font-weight: 200
+    margin-bottom: 1rem
+

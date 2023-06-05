@@ -3,15 +3,10 @@ import {useNavigate} from "react-router-dom";
 
 const logo = require('../images/logo2.png');
 
-const Header = ({ isLogin, setLogin }) => {
+const Header = ({ isLogin }) => {
     const navigate = useNavigate();
 
-    const handleLogout = () => {
-        // Perform logout actions here
-        // Example: Clear user session, update state, etc.
-        setLogin(false);
-        navigate("/");
-    };
+
 
     return (
         <div className="bg-main">
@@ -27,8 +22,8 @@ const Header = ({ isLogin, setLogin }) => {
                         КОНТАКТИ
                     </a>
                     {isLogin ? (
-                        <a onClick={handleLogout} className="nav-btn light">
-                            ВИЙТИ
+                        <a onClick={() => navigate("/profile")} className="nav-btn light">
+                            ПРОФІЛЬ
                         </a>
                     ) : (
                         <a onClick={() => navigate("/login")} className="nav-btn light">
